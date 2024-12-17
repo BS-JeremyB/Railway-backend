@@ -99,7 +99,6 @@ DATABASES = {
         'HOST': 'postgres.railway.internal',  # Correspond au PGHOST
         'PORT': '5432',
     }
-}
     #     'default': {
     #     'ENGINE': 'django.db.backends.postgresql',
     #     'NAME': 'DB_Music',
