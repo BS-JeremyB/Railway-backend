@@ -93,12 +93,13 @@ load_dotenv(dotenv_path)  # Charger le fichier .env
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('DJANGO_POSTGRES_DB', 'DB_Music'),
-        'USER': os.getenv('DJANGO_POSTGRES_USER', 'postgres'),
-        'PASSWORD': 'Test1234',
-        'HOST': os.getenv('DJANGO_POSTGRES_HOST', 'postgres.railway.internal'),
-        'PORT': os.getenv('DJANGO_POSTGRES_PORT', '5432'),
+        'NAME': 'railway',  # Correspond au POSTGRES_DB
+        'USER': 'johndoe',  # Correspond au POSTGRES_USER
+        'PASSWORD': 'Test1234',  # Correspond au POSTGRES_PASSWORD
+        'HOST': 'postgres.railway.internal',  # Correspond au PGHOST
+        'PORT': '5432',
     }
+}
     #     'default': {
     #     'ENGINE': 'django.db.backends.postgresql',
     #     'NAME': 'DB_Music',
