@@ -95,7 +95,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': os.getenv('DJANGO_POSTGRES_DB', 'DB_Music'),
         'USER': os.getenv('DJANGO_POSTGRES_USER', 'postgres'),
-        'PASSWORD': os.getenv('DJANGO_POSTGRES_PASSWORD', 'postgres'),
+        'PASSWORD': 'Test1234',
         'HOST': os.getenv('DJANGO_POSTGRES_HOST', 'postgres.railway.internal'),
         'PORT': os.getenv('DJANGO_POSTGRES_PORT', '5432'),
     }
