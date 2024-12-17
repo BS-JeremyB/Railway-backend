@@ -160,7 +160,4 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES':('rest_framework_simplejwt.authentication.JWTAuthentication',),
 }
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:4200",
-    "railway-backend-production-c369.up.railway.app"
-]
+CORS_ALLOW_ALL_ORIGINS = True
