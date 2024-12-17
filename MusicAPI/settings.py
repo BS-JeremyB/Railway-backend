@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'MusicAPI.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 
-dotenv_path = BASE_DIR.parent / '.env'  # Chemin vers le fichier .env
+dotenv_path = BASE_DIR / '.env'  # Chemin vers le fichier .env
 
 load_dotenv(dotenv_path)  # Charger le fichier .env
 
