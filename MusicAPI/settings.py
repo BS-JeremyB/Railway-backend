@@ -161,3 +161,8 @@ REST_FRAMEWORK = {
 }
 
 CORS_ALLOW_ALL_ORIGINS = True
+
+ALLOWED_HOSTS = [
+    ".railway.app",  # Autorise tous les sous-domaines Railway
+    "localhost",     # Pour le développement local
+]
