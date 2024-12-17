@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 import os
+import dj_database_url
 from dotenv import load_dotenv
 from pathlib import Path
 
@@ -44,7 +45,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'django_filters',
     'corsheaders',
-    'rest_framework_simplejwt'
+    'rest_framework_simplejwt',
     
 
 
@@ -91,13 +92,16 @@ dotenv_path = BASE_DIR / '.env'  # Chemin vers le fichier .env
 load_dotenv(dotenv_path)  # Charger le fichier .env
 
 DATABASES = {
+    #     'default': dj_database_url.config(
+    #     default='postgresql://postgres:rzlYWITCeOCNNrLusXqQzifwqAmOIwKK@junction.proxy.rlwy.net:21491/railway'
+    # )
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'railway',  # Correspond au POSTGRES_DB
         'USER': 'postgres',  # Correspond au POSTGRES_USER
         'PASSWORD': 'rzlYWITCeOCNNrLusXqQzifwqAmOIwKK',  # Correspond au POSTGRES_PASSWORD
-        'HOST': 'postgres.railway.internal',  # Correspond au PGHOST
-        'PORT': '5432',
+        'HOST': 'junction.proxy.rlwy.net',  # Correspond au PGHOST
+        'PORT': '21491'
     }
     #     'default': {
     #     'ENGINE': 'django.db.backends.postgresql',
