@@ -93,7 +93,7 @@ load_dotenv(dotenv_path)  # Charger le fichier .env
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',  # Correspond au POSTGRES_DB
+        'NAME': 'db_music',  # Correspond au POSTGRES_DB
         'USER': 'johndoe',  # Correspond au POSTGRES_USER
         'PASSWORD': 'Test1234',  # Correspond au POSTGRES_PASSWORD
         'HOST': 'postgres.railway.internal',  # Correspond au PGHOST
