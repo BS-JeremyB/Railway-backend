@@ -98,9 +98,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'railway',  # Correspond au POSTGRES_DB
         'USER': 'postgres',  # Correspond au POSTGRES_USER
-        'PASSWORD': 'rzlYWITCeOCNNrLusXqQzifwqAmOIwKK',  # Correspond au POSTGRES_PASSWORD
-        'HOST': 'junction.proxy.rlwy.net',  # Correspond au PGHOST
-        'PORT': '21491'
+        'PASSWORD': 'ZdSUyqsiwGyJbaxqUGUOpobvNPxJeOoD',  # Correspond au POSTGRES_PASSWORD
+        'HOST': 'autorack.proxy.rlwy.net',  # Correspond au PGHOST
+        'PORT': '23867'
     }
     #     'default': {
     #     'ENGINE': 'django.db.backends.postgresql',
