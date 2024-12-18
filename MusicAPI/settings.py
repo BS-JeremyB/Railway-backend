@@ -91,26 +91,37 @@ dotenv_path = BASE_DIR / '.env'  # Chemin vers le fichier .env
 load_dotenv(dotenv_path)  # Charger le fichier .env
 
 DATABASES = {
-    #     'default': dj_database_url.config(
-    #     default='postgresql://postgres:rzlYWITCeOCNNrLusXqQzifwqAmOIwKK@junction.proxy.rlwy.net:21491/railway'
-    # )
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',  # Correspond au POSTGRES_DB
-        'USER': 'postgres',  # Correspond au POSTGRES_USER
-        'PASSWORD': 'rzlYWITCeOCNNrLusXqQzifwqAmOIwKK',  # Correspond au POSTGRES_PASSWORD
-        'HOST': 'junction.proxy.rlwy.net',  # Correspond au PGHOST
-        'PORT': '21491'
+        'NAME': os.environ.get('DJANGO_POSTGRES_DB', 'db_music'),
+        'USER': os.environ.get('DJANGO_POSTGRES_USER', 'postgres'),
+        'PASSWORD': os.environ.get('DJANGO_POSTGRES_PASSWORD', 'password'),
+        'HOST': os.environ.get('DJANGO_POSTGRES_HOST', 'localhost'),
+        'PORT': os.environ.get('DJANGO_POSTGRES_PORT', '5432'),
     }
-    #     'default': {
-    #     'ENGINE': 'django.db.backends.postgresql',
-    #     'NAME': 'DB_Music',
-    #     'USER': 'postgres',
-    #     'PASSWORD': 'postgres',
-    #     'HOST': 'localhost',
-    #     'PORT': '5432',
-    # }
 }
+
+# DATABASES = {
+#     #     'default': dj_database_url.config(
+#     #     default='postgresql://postgres:rzlYWITCeOCNNrLusXqQzifwqAmOIwKK@junction.proxy.rlwy.net:21491/railway'
+#     # )
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'railway',  # Correspond au POSTGRES_DB
+#         'USER': 'postgres',  # Correspond au POSTGRES_USER
+#         'PASSWORD': 'rzlYWITCeOCNNrLusXqQzifwqAmOIwKK',  # Correspond au POSTGRES_PASSWORD
+#         'HOST': 'junction.proxy.rlwy.net',  # Correspond au PGHOST
+#         'PORT': '21491'
+#     }
+#     #     'default': {
+#     #     'ENGINE': 'django.db.backends.postgresql',
+#     #     'NAME': 'DB_Music',
+#     #     'USER': 'postgres',
+#     #     'PASSWORD': 'postgres',
+#     #     'HOST': 'localhost',
+#     #     'PORT': '5432',
+#     # }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
